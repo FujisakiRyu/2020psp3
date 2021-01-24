@@ -113,18 +113,18 @@ void DepthFirstSearch(int size, int matrix[size][size], int start)
         visited[a]=0;
     }
 
-    StsckInit();
+    StackInit();
 
     StackPush(start);
 
     while(StackIsEmpty()==FALSE){
         
-        val = StackPOp();
+        val = StackPop();
 
         if(visited[val]==0){
 
             visited[val]=1;
-            PrintStaitionName(val);
+            PrintStationName(val);
 
             for(i=0;i<size;i++){
                 if(matrix[val][i]>0){
@@ -202,7 +202,7 @@ void BreadthFirstSearch(int size, int matrix[size][size], int start)
     int visited[size];
     int val,i,a;
 
-    for(a=0;a>size;a++){
+    for(a=0;a>=size-1;a++){
         visited[a]=0;
     }
 
